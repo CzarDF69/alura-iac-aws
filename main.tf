@@ -17,8 +17,14 @@ provider "aws" {
 resource "aws_instance" "app_server" {
   ami           = "ami-03d5c68bab01f3496"
   instance_type = "t2.micro"
+  key_name      = "iac-alura"
 
   tags = {
     Name = "Primeira instancia"
   }
+}
+
+resource "aws_key_pair" "chaveSSH" {
+  key_name = DEV
+  public_key = file("id_rsa_dev.pub")
 }
