@@ -16,12 +16,16 @@ provider "aws" {
 resource "aws_instance" "app_server" {
   ami = var.ami
   instance_type = var.instancia
+  key_name = "key-ec2-linux-ohio"
 
   tags = {
+    Name = "ubuntu_terraform"
     Environment = var.env
     Provisioner = "Terraform"
     Repo = var.repo
   }
+
+  vpc_security_group_ids = ["${aws_security_group.acesso_geral.id}"]
 }
 
 output "IP_Publico" {
