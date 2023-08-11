@@ -1,5 +1,5 @@
-resource "aws_security_group" "acesso_geral" {
-    name = "acesso_geral"
+resource "aws_security_group" "grupo_acesso" {
+    name = "grupo_acesso"
     description = "Grupo de Seguranca Terraform"
 
     ingress {
@@ -25,7 +25,7 @@ resource "aws_security_group" "acesso_geral" {
     }
 
     tags = {
-      Name = "acesso_geral"
+      Name = "grupo_acesso"
       Origem = "Terraform"
     }
 }

@@ -25,7 +25,7 @@ resource "aws_instance" "app_server" {
     Repo = var.repo
   }
 
-  vpc_security_group_ids = ["${aws_security_group.acesso_geral.id}"]
+  vpc_security_group_ids = ["${aws_security_group.grupo_acesso.id}"]
 }
 
 output "IP_Publico" {

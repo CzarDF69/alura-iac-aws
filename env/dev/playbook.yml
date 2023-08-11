@@ -1,6 +1,6 @@
 - hosts: terraform-ansible
   tasks:
-  - name: Instalando o python3, virtualenv
+  - name: Instalando o Python3 e Virtualenv
     apt:
       pkg:
       - python3
@@ -13,7 +13,7 @@
       name:
         - django
         - djangorestframework
-  - name: verificando se o projeto ja foi iniciado
+  - name: Verificando se o projeto ja existe
     stat:
       path: /home/ubuntu/tcc/setup/settings.py
     register: projeto

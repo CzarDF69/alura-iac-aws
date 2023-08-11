@@ -6,7 +6,3 @@
 # .tfstate files
 *.tfstate
 *.tfstate.*
-
-*.pem
-
-*id_rsa*

@@ -1,4 +1,5 @@
 variable "regiao_aws" {
+    description = "Region to be used"
     type = string
 }
 
@@ -17,5 +18,6 @@ variable "instancia" {
 }
 
 variable "repo" {
+    description = "Repositorio no GitHub"
     type = string
 }
