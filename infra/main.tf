@@ -16,7 +16,7 @@ provider "aws" {
 resource "aws_instance" "app_server" {
   ami = var.ami
   instance_type = var.instancia
-  key_name = "key-ec2-linux-ohio"
+  key_name = var.chave
 
   tags = {
     Name = "ubuntu_terraform"

@@ -21,3 +21,8 @@ variable "repo" {
     description = "Repositorio no GitHub"
     type = string
 }
+
+variable "chave" {
+    description = "Chave de acesso a AWS"
+    type = string
+}
